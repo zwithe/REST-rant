@@ -13,6 +13,10 @@ h1 {
     color: cornflowerblue;
     text-align: center;
 }
+h2 {
+    color: lightblue;
+    text-align: center;
+}
 img {
     width: 50%;
 }
@@ -39,4 +43,25 @@ nav a {
 nav a:hover {
     color: pink;
     text-decoration: none;
+}
+.flexCustom {
+    display: flex;
+    justify-content: center;
+}
+.flexCustom section {
+    width: 40%;
+    min-height: 30vh;
+}
+.flexCustom section img {
+    width: 90%;
+    height: auto;
+}
+hr {
+    width: 87.25%;
+    height: 2px;
+    background-color: #767676;
+    border: none;
+    margin: auto;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
 }
