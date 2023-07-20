@@ -9,26 +9,34 @@ function show (data) {
             <div className='flexCustom'>
               <section>
                 <img src={data.place.pic} alt={data.place.name}/>
+                <h3>
+                  Located in {data.place.city}, {data.place.state}
+                </h3>
               </section>
               <section>
                 <h2>
-                  Cuisines
+                  Description
                 </h2>
-                <p>
-                  {data.place.cuisines}
-                </p>
-                <h2>
-                  Location
-                </h2>
-                <p>
-                  {data.place.city}, {data.place.state}
-                </p>
+                <h3>
+                  {data.place.showEstablished()}
+                </h3>
+                <h4>
+                  Serving {data.place.cuisines}
+                </h4>
                 <h2>
                   Rating
                 </h2>
                 <p>
                   No rating yet
                 </p>
+            <a href={`/places/${data.id}/edit`} className="btn btn-warning"> 
+              Edit
+            </a>
+            <form method="POST" action={`/places/${data.id}?_method=DELETE`}> 
+              <button type="submit" className="btn btn-danger">
+                Delete
+              </button>
+            </form>     
               </section>
             </div>
             <hr/>
@@ -38,14 +46,6 @@ function show (data) {
             <p>
               No comments yet
             </p>
-            <a href={`/places/${data.id}/edit`} className="btn btn-warning"> 
-              Edit
-            </a>
-            <form method="POST" action={`/places/${data.id}?_method=DELETE`}> 
-              <button type="submit" className="btn btn-danger">
-                Delete
-              </button>
-            </form>     
 
           </main>
         </Def>
